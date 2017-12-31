@@ -1,0 +1,25 @@
+[
+  {
+    "name": "config name 1",
+    "lastEdited": {
+      "date": {
+        "year": 2000,
+        "month": 1,
+        "day": 1
+      },
+      "time": {
+        "hour": 0,
+        "minute": 0,
+        "second": 0,
+        "nano": 0
+      }
+    },
+    "similarityThreshold": 0.5,
+    "relevantOnly": true,
+    "selectedMedia": [
+      "media 1"
+    ],
+    "title": "title 1",
+    "minLetters": 1000
+  }
+]

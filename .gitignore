@@ -1,0 +1,50 @@
+# Java Generated
+*.class
+*.jar
+*.war
+*.ear
+
+# other
+dump.rdb
+
+# Cache of project
+.gradletasknamecache
+
+# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
+# gradle/wrapper/gradle-wrapper.properties
+
+# OS generated filter-configs-access
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Spring Generated
+.springBeans
+
+# Eclipse Generated
+.classpath
+.project
+.settings/
+.metadata/
+target/
+
+# IntelliJ Generated
+.idea
+
+
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# Avoid ignoring Maven wrapper jar file (.jar filter-configs-access are usually ignored)
+!/.mvn/wrapper/maven-wrapper.jar

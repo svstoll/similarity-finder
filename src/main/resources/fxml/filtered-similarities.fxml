@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Copyright 2017 Sven Stoll. All rights reserved.
+Licensed under the MIT License. See LICENSE file in the project root for full license information.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="similaritiesRootPane" prefHeight="600.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ch.svenstoll.similarityfinder.ui.FilteredSimilaritiesController">
+    <children>
+        <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+              AnchorPane.topAnchor="0.0">
+            <children>
+                <Label prefHeight="27.0" prefWidth="349.0" text="Sets of Similar Articles">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="10.0"/>
+                    </VBox.margin>
+                </Label>
+                <TreeTableView fx:id="similaritiesTableView" prefHeight="200.0" prefWidth="200.0"
+                               VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TreeTableColumn fx:id="idColumn" prefWidth="75.0" text="ID"/>
+                        <TreeTableColumn fx:id="titleColumn" prefWidth="75.0" text="Title"/>
+                        <TreeTableColumn fx:id="mediumColumn" prefWidth="75.0" text="Medium"/>
+                        <TreeTableColumn fx:id="dateColumn" prefWidth="75.0" text="Date"/>
+                        <TreeTableColumn fx:id="lengthColumn" prefWidth="75.0" text="Length"/>
+                    </columns>
+                    <VBox.margin>
+                        <Insets bottom="10.0"/>
+                    </VBox.margin>
+                </TreeTableView>
+                <AnchorPane prefHeight="24.0">
+                    <children>
+                        <Button fx:id="copyAllButton" alignment="CENTER" disable="true"
+                                minWidth="100.0" mnemonicParsing="false" onAction="#copyAllIds"
+                                prefHeight="24.0" text="Copy All IDs" textAlignment="CENTER"
+                                AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                        <Label fx:id="counterLabel" layoutX="542.0" layoutY="14.0" prefHeight="24.0"
+                               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                    </children>
+                </AnchorPane>
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>

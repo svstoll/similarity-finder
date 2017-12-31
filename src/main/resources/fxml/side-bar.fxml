@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Copyright 2017 Sven Stoll. All rights reserved.
+Licensed under the MIT License. See LICENSE file in the project root for full license information.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Tooltip?>
+
+<VBox fx:id="sideBarRootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="228.0"
+      minWidth="140.0" prefWidth="140.0" styleClass="side-bar-main-pane"
+      xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ch.svenstoll.similarityfinder.ui.SideBarController">
+    <children>
+        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/logo.png"/>
+            </image>
+            <VBox.margin>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+            </VBox.margin>
+        </ImageView>
+        <ScrollPane fitToHeight="true" fitToWidth="true" VBox.vgrow="ALWAYS">
+            <content>
+                <VBox styleClass="side-bar-button-container">
+                    <children>
+                        <HBox fx:id="filterVisibilityButton" focusTraversable="true"
+                              onMouseClicked="#requestFilterVisibilitySwitch" prefHeight="24.0"
+                              spacing="10.0" styleClass="side-bar-button">
+                            <children>
+                                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true"
+                                           preserveRatio="true">
+                                    <image>
+                                        <Image url="@../icons/filter.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label fx:id="filterIconLabel" prefHeight="24.0" text="Hide Filter">
+                                    <tooltip>
+                                        <Tooltip text="Ctrl + F"/>
+                                    </tooltip>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets/>
+                            </VBox.margin>
+                            <padding>
+                                <Insets bottom="10.0" left="20.0" right="20.0" top="10.0"/>
+                            </padding>
+                        </HBox>
+                        <HBox fx:id="settingsButton" focusTraversable="true"
+                              onMouseClicked="#openSettings"
+                              prefHeight="24.0" spacing="10.0" styleClass="side-bar-button">
+                            <children>
+                                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true"
+                                           preserveRatio="true">
+                                    <image>
+                                        <Image url="@../icons/settings.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label prefHeight="24.0" text="Settings">
+                                    <tooltip>
+                                        <Tooltip text="Ctrl + S"/>
+                                    </tooltip>
+                                </Label>
+                            </children>
+                            <padding>
+                                <Insets bottom="10.0" left="20.0" right="20.0" top="10.0"/>
+                            </padding>
+                        </HBox>
+                        <HBox fx:id="aboutButton" focusTraversable="true"
+                              onMouseClicked="#openAboutDialog"
+                              prefHeight="24.0" spacing="10.0" styleClass="side-bar-button">
+                            <children>
+                                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true"
+                                           preserveRatio="true">
+                                    <image>
+                                        <Image url="@../icons/info.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label prefHeight="24.0" text="About"/>
+                            </children>
+                            <padding>
+                                <Insets bottom="10.0" left="20.0" right="20.0" top="10.0"/>
+                            </padding>
+                        </HBox>
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </children>
+</VBox>
